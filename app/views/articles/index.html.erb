@@ -1,7 +1,9 @@
-<h1>My Articles</h1>
-<ol>
-  <% @articles.each do |article|%>
-    <li><%= article.title%></li>
-    <p><%= article.content%></P>
-  <%end%>
-</ol>
+<div class="container">
+  <h1 class="mb-4 mt-3">My Articles</h1>
+  <% @articles.each do |article| %>
+    <article>
+      <h2 class="mt-3"><%= link_to article.title, article %></h2>
+      <%= article.content[0..100] %>
+    </article>
+  <% end %>
+</div>
