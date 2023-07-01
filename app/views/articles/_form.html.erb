@@ -1,5 +1,9 @@
 <%= simple_form_for(@article) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content, data: { editor: 'markdown' }, rows: 10 %>
+  <div class="mb-3">
+    <%= f.input :title %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :content, data: { editor: 'markdown' }, rows: 10 %>
+  </div>
   <%= f.submit class: 'btn btn-primary my-4' %>
 <% end %>
